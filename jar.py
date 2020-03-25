@@ -57,8 +57,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
     server.starttls()
-    server.login('rambirla02@gmail.com','hindustan123ram')
-    server.sendmail('rambirla02@gmail.com', to,content)
+    server.login('email','password')
+    server.sendmail('email', to,content)
     server.close()
 
 if __name__ == "__main__":
@@ -112,12 +112,12 @@ if __name__ == "__main__":
             path = "C:\\Program Files\\Sublime Text 3\\subl.exe"
             os.startfile(path)
 
-        elif 'email to prakhar mangal' in query:
+        elif 'email to x' in query:
             try:
                 speak("Ok! Boss")
                 speak("what should i say?")
                 content = takeCommand()
-                to = "mangalprakhar07@gmail.com"
+                to = "x's email"
                 sendEmail(to, content)
                 speak("email has been sent")
             except Exception as e:
